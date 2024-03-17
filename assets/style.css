@@ -39,7 +39,9 @@ header nav{
 }
 .hero img{
     width: 400px;
-    background: gray; 
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 h1{
     width: 400px;
