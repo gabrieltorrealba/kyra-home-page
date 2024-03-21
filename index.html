@@ -5,97 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Kyra page</title>
 </head>
 <body>
     <header>
-        <img src="" alt="logo">
-        <nav>
+        <img class="logo" src="./assets/img/kyraLogo.png" alt="logo">
+        <!-- <nav>
             <ul>
-                <li>PORTADA</li>
                 <li>CONTACTO</li>
                 <li>IMFORMACIÓN</li>
                 <li>CARRUSEL</li>
             </ul>
+        </nav> -->
+        <nav class="navbar">
+
+            <input type="checkbox" id="toggle-menu">
+            <label for="toggle-menu" class="bars-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="navbar-list">
+                <li ><a href="#" class="navbar-link">IMFORMACIÓN</a></li>
+                <li><a href="#" class="navbar-link">CONTACTO</a></li>
+                <li><a href="#" class="navbar-link">FOTOS</a></li>
+            </ul>
         </nav>
+
+
     </header>
     <main>
         <!-- Section-Hero -->
         <section class="section-hero">
-            <div class="hero bg-7">
-                <h1 class="bg-7">Hola! soy <span class="span-name">KYRA</span></h1>
-                <img src="./assets/img/kyra7.jpg" alt="kyra" class="w-[10rem]">
+            <div class="hero">
+                <h1 class="titulo">Hola! soy <span class="span-name">KYRA</span></h1>
+                <div class="img-hero">
+                    <img src="./assets/img/kyra7.jpg" alt="kyra" class="w-[10rem]">
+                </div>
             </div>
         </section>
         
         <!-- Section-Contact -->
         <section class="section-contact">
-            <div>
-                <p>Si estas viendo esto es porque me perdi 😔
-                    Por favor contacta con mis padres:
-                </p>
+            <div class="textContact">
+                <p>Si estas viendo esto es porque me perdi </p>
+                <p>Por favor contartar a mis padres:</p>
             </div>
             <div class="btns">
                 <button class="btn">
+                    <i class="fa-brands fa-whatsapp"></i>
                     <a class="btn-contact" href="https://wa.me/+5491125070637?text=Hola%20Gabriel%2C%20he%20encontrado%20a%20Kyra!">
-                    Gabo
+                    GABO
                     </a>
+                    
                 </button>
                 <button class="btn">
+                    <i class="fa-brands fa-whatsapp"></i>
                     <a class="btn-contact" href="https://wa.me/+5491126977959?text=Hola%20Stefania%2C%20he%20encontrado%20a%20Kyra!">
-                        Stefy
+                        STEFI
                         </a>
                 </button>
             </div>
         </section>
-
-        
-
-
-
-
-
-        <!-- component -->
-        <!-- This is an example component -->
-        <div class="max-w-2xl mx-auto">
-	    <div id="default-carousel" class="relative" data-carousel="static">
-        <!-- Carousel wrapper -->
-        <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
-            <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out bg-gray-800" data-carousel-item>
-                <img src="./assets/img/kyra1.jpg" class="object-cover w-full h-48 block absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2" alt="...">
-            </div>
-            <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out bg-gray-800" data-carousel-item>
-                <img src="./assets/img/kyra2.jpg" class="object-cover w-full h-48 block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out bg-gray-800" data-carousel-item>
-                <img src="./assets/img/kyra3.jpg" class="object-cover w-full h-48 block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-            </div>
+        <section class="section-album">
+            <h2 class="titulo-album">Algunas de mis fotos</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra1.jpg" alt="">
         </div>
-        <!-- Slider indicators -->
-        <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra2.jpg" alt="">
         </div>
-        <!-- Slider controls -->
-        <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                <span class="hidden">Previous</span>
-            </span>
-        </button>
-        <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                <span class="hidden">Next</span>
-            </span>
-        </button>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra4.jpg" alt="">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra5.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra3.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra11.jpg" alt="">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra16.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra15.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra12.jpg" alt="">
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra10.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra7.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra8.jpg" alt="">
+        </div>
+    </div>
             </div>
-            <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
-        </div>
+        </section>
     </main>
 </body>
 </html>
