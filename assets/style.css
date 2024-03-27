@@ -46,7 +46,7 @@ header {
 .navbar-link {
   text-decoration: none;
   color: black;
-  font-weight: 300;
+  font-weight: 400;
 }
 .bars-menu {
   display: flex;
@@ -75,30 +75,7 @@ header {
   /* se puede eliminar */
   transition: transform 0.3s;
 }
-@media (max-width: 576px) {
-    .navbar ul {
-      background: rgb(224, 215, 215);
-      width: 100%;
-      height: calc(100vh - 80px);
-      position: absolute;
-      top: 80px;
-      left: 0;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      /* display: none; */
-      transform: translateX(200%);
-      transition: all 0.4s ease;
-    }
-    .navbar i {
-      display: flex;
-    }
-  
-    #toggle-menu:checked ~ .navbar-list {
-      /*   display: flex; */
-      transform: translateX(0);
-    }
-  }
+
 /* ===========================Header Menu Hamburguesa=============================== */
 
 .logo {
