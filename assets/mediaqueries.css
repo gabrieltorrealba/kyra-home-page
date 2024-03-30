@@ -1,17 +1,24 @@
 @media (max-width: 576px) {
     .navbar ul {
-      background: rgb(224, 215, 215);
+     /*  backdrop-filter: blur(10px); */
+      background-image: url("./img/fondoKyra-01.jpg");
+      background-size: cover;
+      opacity: 5;
+      /* background: rgba(255, 255, 255, 0.772); */
       width: 100%;
-      height: calc(100vh - 80px);
+      height: calc(100vh - 100px);
       position: absolute;
-      top: 80px;
+      top: 100px;
       left: 0;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      align-items: end;
+      /* justify-content: center; */
       /* display: none; */
       transform: translateX(200%);
       transition: all 0.4s ease;
+      padding: 50px;
+      gap: 3.5rem;
+      font-size: 1.5rem;
     }
     .navbar i {
       display: flex;

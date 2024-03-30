@@ -16,73 +16,47 @@ body {
 main {
   padding: 2rem;
 }
-/* ===========================Header========================================== */
+/* =========================== Header ========================================== */
 header {
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  padding: 0 50px;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
-  backdrop-filter: blur(7px);
-    background: rgba(255, 255, 255, 0.727);
+  backdrop-filter: blur(10px);
+  /* background: rgba(255, 255, 255, 0.579); */
 }
-.navbar ul {
-  list-style-type: none;
-  display: flex;
-  gap: 100px;
+.logo {
+  width: 70px;
 }
-.navbar {
+/* =========================== Menu ================================================= */
+.navbar{
   display: flex;
+}
+.navbar ul{
+  display: flex;
+  gap: 2rem;
 }
 .navbar i {
-  font-size: 36px;
+  font-size: 40px;
   display: none;
 }
 #toggle-menu {
   display: none;
 }
-
-.navbar-link {
-  text-decoration: none;
-  color: black;
-  font-weight: 400;
-}
-.bars-menu {
+.navbar-link{
   display: flex;
-  flex-direction: column;
-  gap: 5px;
-  position: relative;
-}
-#toggle-menu:checked ~ .bars-menu span:nth-child(1) {
-  position: absolute;
-  top: 0;
-  transform: rotate(135deg);
-}
-#toggle-menu:checked ~ .bars-menu span:nth-child(2) {
-  opacity: 0;
-}
-#toggle-menu:checked ~ .bars-menu span:nth-child(3) {
-  position: absolute;
-  top: 0;
-  transform: rotate(225deg);
+  gap: 2rem;
+  font-weight: bold;
+  font-size: 24px;
+  color: #653655;
 }
 
-.bars-menu span {
-  height: 1.5px;
-  width: 30px;
-  background: black;
-  /* se puede eliminar */
-  transition: transform 0.3s;
-}
 
-/* ===========================Header Menu Hamburguesa=============================== */
-
-.logo {
-  width: 70px;
-}
-
-/* ===========================Section Hero========================================== */
+/* =========================== Section Hero ========================================== */
 .hero {
   /* background: rgb(230, 221, 221); */
   display: flex;
@@ -120,7 +94,7 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-/* ===========================Section Contact========================================== */
+/* =========================== Section Contact ========================================== */
 
 .section-contact {
   width: 100%;
@@ -164,7 +138,7 @@ header {
   padding: 10px;
 }
 
-/* ===========================Section Album========================================== */
+/* =========================== Section Album ========================================== */
 .titulo-album {
   font-size: 30px;
   font-weight: bold;

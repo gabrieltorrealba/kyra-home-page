@@ -3,40 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="./assets/mediaqueries.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Kyra page</title>
 </head>
 <body>
     <header>
         <img class="logo" src="./assets/img/KyraLogoPNG.png" alt="logo">
-        <!-- <nav>
-            <ul>
-                <li>CONTACTO</li>
-                <li>IMFORMACIÓN</li>
-                <li>CARRUSEL</li>
-            </ul>
-        </nav> -->
         <nav class="navbar">
-
-            <input type="checkbox" id="toggle-menu">
-            <label for="toggle-menu" class="bars-menu">
+            <label for="toggle-menu">
+                <!-- <span></span>
                 <span></span>
-                <span></span>
-                <span></span>
+                <span></span> -->
+                <i class="fa-solid fa-bars"></i>
             </label>
-
+            <input type="checkbox" id="toggle-menu">
             <ul class="navbar-list">
-                <li ><a href="#" class="navbar-link">IMFORMACIÓN</a></li>
-                <li><a href="#" class="navbar-link">CONTACTO</a></li>
-                <li><a href="#" class="navbar-link">FOTOS</a></li>
+                <li><a href="" class="navbar-link">CONTACTO</a></li>
+                <li><a href="" class="navbar-link">IMFORMACIÓN</a></li>
+                <li><a href="" class="navbar-link">ALBUM</a></li>
             </ul>
         </nav>
-
-
     </header>
     <main>
         <!-- Section-Hero -->
@@ -71,53 +62,55 @@
                 </button>
             </div>
         </section>
+
+        <!-- Section-Album -->
         <section class="section-album">
             <h2 class="titulo-album">Algunas de mis fotos</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-    <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra1.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra2.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra4.jpg" alt="">
-        </div>
-    </div>
-    <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra5.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra3.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra11.jpg" alt="">
-        </div>
-    </div>
-    <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra16.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra15.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra12.jpg" alt="">
-        </div>
-    </div>
-    <div class="grid gap-4">
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra10.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra7.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra8.jpg" alt="">
-        </div>
-    </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra1.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra2.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra5.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra3.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra11.jpg" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra16.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra15.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra12.jpg" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra10.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra7.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="./assets/img/kyra8.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
