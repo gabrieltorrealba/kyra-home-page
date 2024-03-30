@@ -1,4 +1,4 @@
-@media (max-width: 576px) {
+@media (max-width: 598px) {
     .navbar ul {
      /*  backdrop-filter: blur(10px); */
       background-image: url("./img/fondoKyra-01.jpg");
@@ -27,5 +27,13 @@
     #toggle-menu:checked ~ .navbar-list {
       /*   display: flex; */
       transform: translateX(0);
+    }
+  }
+
+
+  /* ocultamos el  menu hamburguesa */
+  @media (min-width: 598px) {
+    .bars-menu {
+      display: none;
     }
   }
