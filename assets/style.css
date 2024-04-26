@@ -1,3 +1,4 @@
+
 * {
   padding: 0;
   margin: 0;
@@ -5,54 +6,64 @@
   box-sizing: border-box;
   text-decoration: none;
   color: #653655;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: Poppins;
   /* outline: 1px solid rgb(24, 46, 187); */
 }
 
 body {
   background-image: url("./img/fondoKyra-01.jpg");
   background-size: cover;
+  background-attachment: fixed;
+  
 }
 main {
-  padding: 2rem;
+  padding: 1rem;
 }
-/* ===========================Header========================================== */
+/* =========================== Header ========================================== */
 header {
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  padding: 0 50px;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
-  backdrop-filter: blur(7px);
-    background: rgba(255, 255, 255, 0.727);
+  backdrop-filter: blur(10px);
+  background: rgb(243 243 243 / 20%)
 }
-.navbar ul {
-  list-style-type: none;
-  display: flex;
-  gap: 100px;
+.logo {
+  width: 70px;
 }
+/* =========================== Menu ================================================= */
 .navbar {
   display: flex;
 }
-.navbar i {
-  font-size: 36px;
-  display: none;
+.navbar ul {
+  display: flex;
+  gap: 2rem;
 }
 #toggle-menu {
   display: none;
 }
-
 .navbar-link {
-  text-decoration: none;
-  color: black;
-  font-weight: 400;
+  display: flex;
+  gap: 2rem;
+  font-weight: bold;
+  font-size: 24px;
+  color: #653655;
 }
 .bars-menu {
   display: flex;
   flex-direction: column;
   gap: 5px;
   position: relative;
+}
+.bars-menu span {
+  height: 2.5px;
+  width: 35px;
+  background: black;
+  transition: transform 0.3s;
 }
 #toggle-menu:checked ~ .bars-menu span:nth-child(1) {
   position: absolute;
@@ -68,21 +79,7 @@ header {
   transform: rotate(225deg);
 }
 
-.bars-menu span {
-  height: 1.5px;
-  width: 30px;
-  background: black;
-  /* se puede eliminar */
-  transition: transform 0.3s;
-}
-
-/* ===========================Header Menu Hamburguesa=============================== */
-
-.logo {
-  width: 70px;
-}
-
-/* ===========================Section Hero========================================== */
+/* =========================== Section Hero =======================================*/
 .hero {
   /* background: rgb(230, 221, 221); */
   display: flex;
@@ -94,12 +91,16 @@ header {
 }
 .img-hero {
   padding: 0.5rem;
+  width: 500px;
+  height: 400px;
 }
 .hero img {
-  width: 400px;
-  height: 400px;
+  height: 450px;
   object-fit: cover;
   border-radius: 50%;
+  width: 450px;
+  align-items: center;
+  margin: 0 auto;
 }
 .titulo {
   width: 400px;
@@ -120,7 +121,7 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-/* ===========================Section Contact========================================== */
+/* =========================== Section Contact=================================== */
 
 .section-contact {
   width: 100%;
@@ -147,26 +148,70 @@ header {
   /* background-color: rgb(177, 235, 235); */
 }
 .btn {
-  width: 250px;
-  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 350px;
+  height: 80px;
   background: #d8c5c4;
   border-radius: 40px;
   border: 1px solid #653655;
 }
-
+button {
+  box-shadow: 2px 0px 4px 3px rgba(0,0,0,0.34);
+  -webkit-box-shadow: 4px 2px 5px 2px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 2px 0px 4px 3px rgba(0,0,0,0.34);
+}
+.icon-whatsapp{
+  font-size: 40px;
+}
 .btn-contact {
   width: 150px;
   color: #653655;
-  padding-bottom: 10px;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bolder;
   letter-spacing: 2px;
-  padding: 10px;
 }
+/* =========================== Section Información ===================================== */
 
-/* ===========================Section Album========================================== */
-.titulo-album {
+.section-informacion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+.section-informacion h2 {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+.div-container-info {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-info {
+  display: flex;
   font-size: 30px;
+}
+.container-info p {
+  font-weight: semi-bold;
+  width: 200px;
+  
+}
+.container-info span {
+  width: 200px;
+  font-weight: lighter;
+  
+}
+/* =========================== Section Album ===================================== */
+.titulo-album {
+  font-size: 35px;
   font-weight: bold;
   text-align: center;
   padding: 5rem;
