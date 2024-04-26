@@ -28,7 +28,30 @@
       /*   display: flex; */
       transform: translateX(0);
     }
+
+
+    /* Tamaño de texto(parrafos) - Movile */
+    .textContact {
+      font-size: 18px;
   }
+    .container-info {
+    font-size: 18px;
+  }
+    /* Tamaño de h2 - Movile  */
+    .section-informacion h2 {
+      font-size: 25px;
+    }
+    .titulo-album {
+      font-size: 25px;
+    }
+
+    /* Tamaño de h1 - Movile */
+    .titulo {
+      font-size: 26px;
+    }
+}
+
+  
 
 
   /* ocultamos el  menu hamburguesa */
