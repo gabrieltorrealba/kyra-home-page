@@ -49,6 +49,16 @@
     .titulo {
       font-size: 26px;
     }
+
+    /* section-información */
+    .container-info p {
+      width: 100px;
+    }
+
+    .container-info span {
+      width: 100px;
+    }
+
 }
 
   
