@@ -13,6 +13,8 @@
 body {
   background-image: url("./img/fondoKyra-01.jpg");
   background-size: cover;
+  background-attachment: fixed;
+  
 }
 main {
   padding: 1rem;
@@ -28,7 +30,7 @@ header {
   position: fixed;
   width: 100%;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.579);
+  background: rgb(243 243 243 / 20%)
 }
 .logo {
   width: 70px;
@@ -89,12 +91,16 @@ header {
 }
 .img-hero {
   padding: 0.5rem;
+  width: 500px;
+  height: 400px;
 }
 .hero img {
-  width: 400px;
-  height: 400px;
+  height: 450px;
   object-fit: cover;
   border-radius: 50%;
+  width: 450px;
+  align-items: center;
+  margin: 0 auto;
 }
 .titulo {
   width: 400px;
@@ -151,6 +157,11 @@ header {
   background: #d8c5c4;
   border-radius: 40px;
   border: 1px solid #653655;
+}
+button {
+  box-shadow: 2px 0px 4px 3px rgba(0,0,0,0.34);
+  -webkit-box-shadow: 4px 2px 5px 2px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 2px 0px 4px 3px rgba(0,0,0,0.34);
 }
 .icon-whatsapp{
   font-size: 40px;
