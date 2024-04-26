@@ -15,7 +15,7 @@ body {
   background-size: cover;
 }
 main {
-  padding: 2rem;
+  padding: 1rem;
 }
 /* =========================== Header ========================================== */
 header {
@@ -28,7 +28,7 @@ header {
   position: fixed;
   width: 100%;
   backdrop-filter: blur(10px);
-  /* background: rgba(255, 255, 255, 0.579); */
+  background: rgba(255, 255, 255, 0.579);
 }
 .logo {
   width: 70px;
@@ -58,8 +58,8 @@ header {
   position: relative;
 }
 .bars-menu span {
-  height: 1.5px;
-  width: 30px;
+  height: 2.5px;
+  width: 35px;
   background: black;
   transition: transform 0.3s;
 }
@@ -162,10 +162,43 @@ header {
   font-weight: bolder;
   letter-spacing: 2px;
 }
+/* =========================== Section Información ===================================== */
 
+.section-informacion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+.section-informacion h2 {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+.div-container-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-info {
+  display: flex;
+  gap: 1rem;
+  font-size: 30px;
+  width: 300px;
+}
+.container-info p {
+  font-weight: semi-bold;
+  
+}
+.container-info span {
+  font-weight: lighter;
+  
+}
 /* =========================== Section Album ===================================== */
 .titulo-album {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
   text-align: center;
   padding: 5rem;
