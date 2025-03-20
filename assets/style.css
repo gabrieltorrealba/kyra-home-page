@@ -6,102 +6,37 @@
   box-sizing: border-box;
   text-decoration: none;
   color: #653655;
-  font-family: Poppins;
-  /* outline: 1px solid rgb(24, 46, 187); */
+  font-family: Lato, sans-serif;
+  color: rgb(0, 0, 0);
 }
 
 body {
-  background-image: url("./img/fondoKyra-01.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #ffffff;
   
 }
 main {
-  padding: 1rem;
-}
-/* =========================== Header ========================================== */
-header {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  padding: 0 50px;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  background: rgb(243 243 243 / 20%)
-}
-.logo {
-  width: 70px;
-}
-/* =========================== Menu ================================================= */
-.navbar {
-  display: flex;
-}
-.navbar ul {
-  display: flex;
-  gap: 2rem;
-}
-#toggle-menu {
-  display: none;
-}
-.navbar-link {
-  display: flex;
-  gap: 2rem;
-  font-weight: bold;
-  font-size: 24px;
-  color: #653655;
-}
-.bars-menu {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  position: relative;
-}
-.bars-menu span {
-  height: 2.5px;
-  width: 35px;
-  background: black;
-  transition: transform 0.3s;
-}
-#toggle-menu:checked ~ .bars-menu span:nth-child(1) {
-  position: absolute;
-  top: 0;
-  transform: rotate(135deg);
-}
-#toggle-menu:checked ~ .bars-menu span:nth-child(2) {
-  opacity: 0;
-}
-#toggle-menu:checked ~ .bars-menu span:nth-child(3) {
-  position: absolute;
-  top: 0;
-  transform: rotate(225deg);
+  gap: 2rem;;
+  padding: 1.5rem;
+  
 }
 
 /* =========================== Section Hero =======================================*/
-.hero {
-  /* background: rgb(230, 221, 221); */
+.section-hero {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 80px;
-}
-.img-hero {
-  padding: 0.5rem;
-  width: 500px;
-  height: 400px;
-}
-.hero img {
-  height: 450px;
-  object-fit: cover;
-  border-radius: 50%;
-  width: 450px;
   align-items: center;
-  margin: 0 auto;
+  gap: 1.5rem;
+  padding: 4rem 2rem;
+  font-size: 1.2rem;
+  background-color: #b8b8b82f;
+  border-radius: 20px;
+  text-align: center;
 }
+
 .titulo {
   width: 400px;
   font-size: 2rem;
@@ -109,70 +44,83 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: rgb(203, 183, 223); */
-}
-.span-name {
-  font-size: 80px;
-  font-weight: bold;
-  padding: 5px;
-  background: #b9952c;
-  background: linear-gradient(to right, #b9952c 0%, #e2bfdb 58%, #653655 83%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
-/* =========================== Section Contact=================================== */
-
-.section-contact {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 5rem;
-  font-size: 30px;
-}
 .textContact {
-  text-align: center;
-  /* background-color: bisque; */
-  font-weight: lighter;
+  max-width: 500px;
 }
+
+/* Botones */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .btns {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  text-align: center;
-  gap: 2rem;
-  /* background-color: rgb(177, 235, 235); */
-}
-.btn {
-  display: flex;
-  justify-content: center;
+  gap: 15px;
   align-items: center;
-  gap: 0.5rem;
-  width: 350px;
-  height: 80px;
-  background: #d8c5c4;
-  border-radius: 40px;
-  border: 1px solid #653655;
 }
-button {
-  box-shadow: 2px 0px 4px 3px rgba(0,0,0,0.34);
-  -webkit-box-shadow: 4px 2px 5px 2px rgba(0, 0, 0, 0.34);
-  -moz-box-shadow: 2px 0px 4px 3px rgba(0,0,0,0.34);
+
+.cta {
+  position: relative;
+  padding: 15px 25px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  overflow: hidden;
 }
-.icon-whatsapp{
-  font-size: 40px;
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: rgba(202, 120, 230, 0.5);
+  width: 54px;
+  height: 54px;
+  transition: all 0.3s ease;
 }
-.btn-contact {
-  width: 150px;
-  color: #653655;
-  font-size: 25px;
-  font-weight: bolder;
-  letter-spacing: 2px;
+
+.cta span {
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.1em;
 }
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #c27bce;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.96);
+}
+
 /* =========================== Section Información ===================================== */
 
 .section-informacion {
@@ -182,6 +130,8 @@ button {
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
+  background-color: #b8b8b82f;
+  border-radius: 20px;
 }
 .section-informacion h2 {
   font-size: 35px;
@@ -210,9 +160,39 @@ button {
   
 }
 /* =========================== Section Album ===================================== */
+.section-album {
+  background-color: #b8b8b82f;
+  border-radius: 20px;
+  padding:20px;
+}
 .titulo-album {
   font-size: 35px;
   font-weight: bold;
   text-align: center;
-  padding: 5rem;
+  padding: 1rem;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajusta el tamaño mínimo según tus preferencias */
+  gap: 10px; /* Ajusta el espacio entre las imágenes */
+}
+
+.album-grid img {
+  width: 100%; /* Las imágenes ocupan todo el ancho de su celda */
+  height: auto;
+  display: block; /* Evita espacios extra debajo de las imágenes */
+  object-fit: cover; /* Ajusta el comportamiento de las imágenes dentro de su contenedor */
+}
+
+/* =========================== animación  ===================================== */ 
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
 }
