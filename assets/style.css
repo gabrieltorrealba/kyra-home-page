@@ -45,6 +45,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 /* animacion del nombre */
 .span-name {
   display: inline-block;
@@ -202,6 +203,7 @@ a {
 .div-container-info span {
   font-weight: 600;
 }
+
 /* =========================== Section Album ===================================== */
 .section-album {
   background-color: #b8b8b82f;

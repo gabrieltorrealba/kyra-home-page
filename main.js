@@ -1,4 +1,4 @@
-
+//lógica del album de fotos
 const imagenes = [
     "./assets/img/kyra1.jpg",
     "./assets/img/kyra2.jpg",
@@ -87,15 +87,14 @@ document.addEventListener("DOMContentLoaded", function () {
     nameElement.textContent = ""; // Limpiar el contenido original
 
     nameText.split("").forEach((letter, index) => {
-      let span = document.createElement("span");
-      span.textContent = letter;
-      span.classList.add("letter-animation"); // Se agrega una clase para los estilos
+        let span = document.createElement("span");
+        span.textContent = letter;
+        span.classList.add("letter-animation"); // Se agrega una clase para los estilos
 
-      setTimeout(() => {
+        setTimeout(() => {
         span.classList.add("visible"); // Se activa la animación
       }, index * 200);
 
-      nameElement.appendChild(span);
+        nameElement.appendChild(span);
     });
-  });
-  
+    });
