@@ -1,3 +1,4 @@
+
 * {
   padding: 0;
   margin: 0;
@@ -5,169 +6,258 @@
   box-sizing: border-box;
   text-decoration: none;
   color: #653655;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  /* outline: 1px solid rgb(24, 46, 187); */
+  font-family: Lato, sans-serif;
+  color: rgb(0, 0, 0);
 }
 
 body {
-  background-image: url("./img/fondoKyra-01.jpg");
-  background-size: cover;
+  background-color: #ffffff;
+  
 }
 main {
-  padding: 2rem;
-}
-/* ===========================Header========================================== */
-header {
-  height: 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  backdrop-filter: blur(7px);
-    background: rgba(255, 255, 255, 0.727);
-}
-.navbar ul {
-  list-style-type: none;
-  display: flex;
-  gap: 100px;
-}
-.navbar {
-  display: flex;
-}
-.navbar i {
-  font-size: 36px;
-  display: none;
-}
-#toggle-menu {
-  display: none;
-}
-
-.navbar-link {
-  text-decoration: none;
-  color: black;
-  font-weight: 400;
-}
-.bars-menu {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  position: relative;
-}
-#toggle-menu:checked ~ .bars-menu span:nth-child(1) {
-  position: absolute;
-  top: 0;
-  transform: rotate(135deg);
-}
-#toggle-menu:checked ~ .bars-menu span:nth-child(2) {
-  opacity: 0;
-}
-#toggle-menu:checked ~ .bars-menu span:nth-child(3) {
-  position: absolute;
-  top: 0;
-  transform: rotate(225deg);
+  gap: 1rem;;
+  padding: 1.5rem;
+  
 }
 
-.bars-menu span {
-  height: 1.5px;
-  width: 30px;
-  background: black;
-  /* se puede eliminar */
-  transition: transform 0.3s;
-}
-
-/* ===========================Header Menu Hamburguesa=============================== */
-
-.logo {
-  width: 70px;
-}
-
-/* ===========================Section Hero========================================== */
-.hero {
-  /* background: rgb(230, 221, 221); */
+/* =========================== Section Hero =======================================*/
+.section-hero {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 80px;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  background-color: #b8b8b82f;
+  border-radius: 20px;
+  text-align: center;
 }
-.img-hero {
-  padding: 0.5rem;
-}
-.hero img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+
 .titulo {
   width: 400px;
-  font-size: 2rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: rgb(203, 183, 223); */
 }
+
+/* Animación del nombre */
 .span-name {
-  font-size: 80px;
+  display: inline-block;
   font-weight: bold;
-  padding: 5px;
-  background: #b9952c;
-  background: linear-gradient(to right, #b9952c 0%, #e2bfdb 58%, #653655 83%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  color: #c27bce;
+  text-shadow: 2px 2px 10px rgba(194, 123, 206, 0.5);
+  overflow: hidden;
 }
 
-/* ===========================Section Contact========================================== */
+/* Letras animadas */
+.letter-animation {
+  display: inline-block;
+  font-size: 3rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
 
-.section-contact {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 5rem;
-  font-size: 30px;
+/* Cuando se activan */
+.letter-animation.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
-.textContact {
-  text-align: center;
-  /* background-color: bisque; */
-  font-weight: lighter;
+
+/* Efecto de flotación al pasar el mouse */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
+
+.span-name:hover {
+  animation: float 1s infinite ease-in-out;
+}
+
+
+/* Botones */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .btns {
   display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.cta {
+  position: relative;
+  padding: 15px 25px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: rgba(202, 120, 230, 0.5);
+  width: 54px;
+  height: 54px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.1em;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
   width: 100%;
-  text-align: center;
-  gap: 2rem;
-  /* background-color: rgb(177, 235, 235); */
-}
-.btn {
-  width: 250px;
-  height: 60px;
-  background: #d8c5c4;
-  border-radius: 40px;
-  border: 1px solid #653655;
+  background: #c27bce;
 }
 
-.btn-contact {
-  width: 150px;
-  color: #653655;
-  padding-bottom: 10px;
-  font-size: 30px;
-  font-weight: bolder;
-  letter-spacing: 2px;
-  padding: 10px;
+.cta:hover svg {
+  transform: translateX(0);
 }
 
-/* ===========================Section Album========================================== */
-.titulo-album {
-  font-size: 30px;
+.cta:active {
+  transform: scale(0.96);
+}
+
+/* =========================== Section Información ===================================== */
+
+.section-informacion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: rgba(184, 184, 184, 0.18);
+  border-radius: 20px;
+}
+
+.section-informacion h2 {
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  padding: 5rem;
+}
+
+.div-container-info {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.div-container-info div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.div-container-info div:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.div-container-info span {
+  font-weight: 600;
+}
+
+/* =========================== Section Album ===================================== */
+.section-album {
+  background-color: #b8b8b82f;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.titulo-album {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.album-grid div {
+  flex-basis: calc(100% / 4 - 10px); /* 4 imágenes por fila */
+  max-width: 250px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animación inicial */
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Llega desde abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.album-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Clase para activar la animación inicial */
+.fade-in-initial {
+  animation: fadeInFromBottom 0.8s ease-out forwards;
+}
+
+/* Animación para el cambio de imágenes */
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
 }
