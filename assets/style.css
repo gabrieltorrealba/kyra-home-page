@@ -224,10 +224,22 @@ a {
 
 .album-grid div {
   flex-basis: calc(100% / 4 - 10px); /* 4 imágenes por fila */
-  max-width: 250px; 
+  max-width: 250px;
   aspect-ratio: 1/1;
   overflow: hidden;
   position: relative;
+}
+
+/* Animación inicial */
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Llega desde abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .album-grid img {
@@ -235,20 +247,22 @@ a {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  opacity: 0;
-  transform: scale(0.9);
-  animation: fadeIn 1s ease-out forwards;
-  transition: opacity 1s ease-in-out;
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-/* Animación de aparición */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: scale(0.9);
-  }
-  to {
-      opacity: 1;
-      transform: scale(1);
-  }
+/* Clase para activar la animación inicial */
+.fade-in-initial {
+  animation: fadeInFromBottom 0.8s ease-out forwards;
+}
+
+/* Animación para el cambio de imágenes */
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
 }

@@ -29,7 +29,7 @@ const obtenerImagenesAleatorias = () => {
     return seleccionadas;
 };
 
-// Función para cargar imágenes en el álbum
+// Función para cargar imágenes con animación inicial
 const cargarImagenes = () => {
     albumContainer.innerHTML = "";
     const imagenesMostradas = obtenerImagenesAleatorias();
@@ -43,12 +43,17 @@ const cargarImagenes = () => {
         div.appendChild(img);
         albumContainer.appendChild(div);
 
+        // Aplicar animación de entrada con delay progresivo
+        setTimeout(() => {
+            img.classList.add("fade-in-initial");
+        }, index * 300); // Cada imagen entra con un delay de 300ms
+
         // Iniciar cambios aleatorios de imágenes en tiempos diferentes
         cambiarImagenDinamicamente(img);
     });
 };
 
-// Función para cambiar cada imagen individualmente en tiempos distintos
+// Función para cambiar cada imagen individualmente con animación suave
 const cambiarImagenDinamicamente = (img) => {
     setInterval(() => {
         img.classList.add("fade-out"); // Aplica el efecto de desvanecimiento
@@ -60,13 +65,18 @@ const cambiarImagenDinamicamente = (img) => {
             } while (nuevaImagen === img.src); // Asegurar que la nueva imagen sea diferente
 
             img.src = nuevaImagen;
-            img.classList.remove("fade-out"); // Restablece la opacidad
-        }, 1000); // Tiempo para el cambio visual
 
-    }, Math.floor(Math.random() * (6000 - 2000) + 2000)); // Cambia cada imagen entre 2 y 6 segundos
+            setTimeout(() => {
+                img.classList.remove("fade-out");
+                img.classList.add("fade-in"); // Aparece suavemente
+            }, 300);
+
+        }, 700); // Tiempo total de la transición
+
+    }, Math.floor(Math.random() * (6000 - 3000) + 3000)); // Cambia cada imagen entre 3 y 6 segundos
 };
 
-// Cargar las primeras imágenes
+// Cargar imágenes con animación inicial
 cargarImagenes();
 
 
