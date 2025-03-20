@@ -30,8 +30,8 @@ main {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  padding: 4rem 2rem;
-  font-size: 1.2rem;
+  padding: 1.5rem;
+  font-size: 1rem;
   background-color: #b8b8b82f;
   border-radius: 20px;
   text-align: center;
@@ -46,50 +46,41 @@ main {
   align-items: center;
 }
 
-/* animacion del nombre */
+/* Animación del nombre */
 .span-name {
   display: inline-block;
-  position: relative;
   font-weight: bold;
+  letter-spacing: 2px;
   color: #c27bce;
   text-shadow: 2px 2px 10px rgba(194, 123, 206, 0.5);
+  overflow: hidden;
 }
 
+/* Letras animadas */
 .letter-animation {
   display: inline-block;
+  font-size: 3rem;
   opacity: 0;
-  transform: translateY(20px) scale(0.8);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
+/* Cuando se activan */
 .letter-animation.visible {
   opacity: 1;
-  letter-spacing: 4px;
-  font-size: 40px;
-  transform: translateY(0) scale(1);
+  transform: translateX(0);
 }
 
-@keyframes drawLine {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
-/* Efecto de oscilación */
+/* Efecto de flotación al pasar el mouse */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
+  50% { transform: translateY(-15px); }
 }
 
 .span-name:hover {
   animation: float 1s infinite ease-in-out;
 }
-.textContact {
-  max-width: 500px;
-}
+
 
 /* Botones */
 a {
@@ -176,7 +167,7 @@ a {
 }
 
 .section-informacion h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
 }
@@ -208,14 +199,14 @@ a {
 .section-album {
   background-color: #b8b8b82f;
   border-radius: 20px;
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 .titulo-album {
-  font-size: 35px;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .album-grid {

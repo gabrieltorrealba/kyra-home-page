@@ -80,21 +80,23 @@ const cambiarImagenDinamicamente = (img) => {
 cargarImagenes();
 
 
-//animacion del nombre 
+//animacion del nombre
 document.addEventListener("DOMContentLoaded", function () {
     const nameElement = document.querySelector(".span-name");
     const nameText = nameElement.textContent;
     nameElement.textContent = ""; // Limpiar el contenido original
-
+  
     nameText.split("").forEach((letter, index) => {
-        let span = document.createElement("span");
-        span.textContent = letter;
-        span.classList.add("letter-animation"); // Se agrega una clase para los estilos
-
-        setTimeout(() => {
-        span.classList.add("visible"); // Se activa la animación
-      }, index * 200);
-
-        nameElement.appendChild(span);
+      let span = document.createElement("span");
+      span.textContent = letter;
+      span.classList.add("letter-animation");
+  
+      nameElement.appendChild(span);
+  
+      // Activar la animación con un pequeño retraso entre cada letra
+      setTimeout(() => {
+        span.classList.add("visible");
+      }, index * 280); // Ajusta el tiempo si quieres que entren más rápido o más lento
     });
-    });
+  });
+  
