@@ -1,5 +1,4 @@
 
-//section album
 const imagenes = [
     "./assets/img/kyra1.jpg",
     "./assets/img/kyra2.jpg",
@@ -13,41 +12,80 @@ const imagenes = [
     "./assets/img/kyra10.jpg",
     "./assets/img/kyra7.jpg",
     "./assets/img/kyra8.jpg",
-  ];
-  
-  const albumContainer = document.getElementById("album-container");
-let delay = 200; // Retraso inicial en milisegundos
+];
 
-imagenes.forEach((imagen, index) => {
-    setTimeout(() => {
+const albumContainer = document.getElementById("album-container");
+const NUM_IMAGENES_INICIALES = 8;
+
+// Función para obtener imágenes aleatorias sin repetir
+const obtenerImagenesAleatorias = () => {
+    let seleccionadas = [];
+    let copiaArray = [...imagenes];
+
+    for (let i = 0; i < NUM_IMAGENES_INICIALES; i++) {
+        let indice = Math.floor(Math.random() * copiaArray.length);
+        seleccionadas.push(copiaArray.splice(indice, 1)[0]);
+    }
+    return seleccionadas;
+};
+
+// Función para cargar imágenes en el álbum
+const cargarImagenes = () => {
+    albumContainer.innerHTML = "";
+    const imagenesMostradas = obtenerImagenesAleatorias();
+
+    imagenesMostradas.forEach((imagen, index) => {
         const div = document.createElement("div");
-        div.innerHTML = `<img src="${imagen}" alt="Kyra" 
-            class="h-auto max-w-full rounded-lg opacity-0 scale-90 transition-all duration-500 ease-in-out"
-            style="animation: fadeIn 0.8s ease-out forwards;">`;
+        const img = document.createElement("img");
+        img.src = imagen;
+        img.alt = "Kyra";
+
+        div.appendChild(img);
         albumContainer.appendChild(div);
-    }, delay);
-    delay += 400; // Incrementa el retraso para la siguiente imagen
-});
+
+        // Iniciar cambios aleatorios de imágenes en tiempos diferentes
+        cambiarImagenDinamicamente(img);
+    });
+};
+
+// Función para cambiar cada imagen individualmente en tiempos distintos
+const cambiarImagenDinamicamente = (img) => {
+    setInterval(() => {
+        img.classList.add("fade-out"); // Aplica el efecto de desvanecimiento
+
+        setTimeout(() => {
+            let nuevaImagen;
+            do {
+                nuevaImagen = imagenes[Math.floor(Math.random() * imagenes.length)];
+            } while (nuevaImagen === img.src); // Asegurar que la nueva imagen sea diferente
+
+            img.src = nuevaImagen;
+            img.classList.remove("fade-out"); // Restablece la opacidad
+        }, 1000); // Tiempo para el cambio visual
+
+    }, Math.floor(Math.random() * (6000 - 2000) + 2000)); // Cambia cada imagen entre 2 y 6 segundos
+};
+
+// Cargar las primeras imágenes
+cargarImagenes();
+
 
 //animacion del nombre 
 document.addEventListener("DOMContentLoaded", function () {
     const nameElement = document.querySelector(".span-name");
     const nameText = nameElement.textContent;
     nameElement.textContent = ""; // Limpiar el contenido original
-  
+
     nameText.split("").forEach((letter, index) => {
       let span = document.createElement("span");
       span.textContent = letter;
-      span.style.opacity = "0";
-      span.style.transform = "translateY(20px)";
-      span.style.transition = "opacity 0.4s ease, transform 0.4s ease";
-      span.style.display = "inline-block";
-  
+      span.classList.add("letter-animation"); // Se agrega una clase para los estilos
+
       setTimeout(() => {
-        span.style.opacity = "1";
-        span.style.transform = "translateY(0)";
-      }, index * 200); // Retraso progresivo para cada letra
-  
+        span.classList.add("visible"); // Se activa la animación
+      }, index * 200);
+
       nameElement.appendChild(span);
     });
   });
+  
