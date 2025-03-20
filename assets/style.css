@@ -63,6 +63,8 @@ main {
 
 .letter-animation.visible {
   opacity: 1;
+  letter-spacing: 4px;
+  font-size: 40px;
   transform: translateY(0) scale(1);
 }
 
